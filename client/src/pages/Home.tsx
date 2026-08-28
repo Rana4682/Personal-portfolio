@@ -110,7 +110,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[100svh] md:min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden">
         <div
           className="absolute inset-0 z-0 opacity-30"
           style={{
