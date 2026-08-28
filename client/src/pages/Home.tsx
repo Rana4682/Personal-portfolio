@@ -98,14 +98,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-primary">Hasnain</div>
-          <div className="flex items-center gap-8">
-            <a href="#about" className="text-sm hover:text-primary transition-colors">About</a>
-            <a href="#projects" className="text-sm hover:text-primary transition-colors">Projects</a>
-            <a href="#experience" className="text-sm hover:text-primary transition-colors">Experience</a>
-            <a href="#skills" className="text-sm hover:text-primary transition-colors">Skills</a>
-            <a href="#contact" className="text-sm hover:text-primary transition-colors">Contact</a>
+        <div className="container flex items-center justify-between h-16 gap-2">
+          <div className="text-lg md:text-xl font-bold text-primary shrink-0">Hasnain</div>
+          <div className="flex items-center gap-3 md:gap-8 overflow-x-auto">
+            <a href="#about" className="text-xs md:text-sm whitespace-nowrap hover:text-primary transition-colors">About</a>
+            <a href="#projects" className="text-xs md:text-sm whitespace-nowrap hover:text-primary transition-colors">Projects</a>
+            <a href="#experience" className="text-xs md:text-sm whitespace-nowrap hover:text-primary transition-colors">Experience</a>
+            <a href="#skills" className="text-xs md:text-sm whitespace-nowrap hover:text-primary transition-colors">Skills</a>
+            <a href="#contact" className="text-xs md:text-sm whitespace-nowrap hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
       </nav>
