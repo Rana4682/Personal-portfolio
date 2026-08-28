@@ -13,14 +13,6 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-/**
- * Design Philosophy: Modern Tech Minimalism with Bold Black & Yellow Accents
- * - Asymmetric layouts with geometric precision
- * - High-contrast color scheme for maximum visual impact
- * - Smooth animations and micro-interactions
- * - Technical typography (Space Grotesk for headings, Inter for body)
- */
-
 interface AnimatedElementProps {
   children: React.ReactNode;
   delay?: number;
@@ -73,7 +65,6 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Submit to Formspree
     fetch("https://formspree.io/f/mjgznabg", {
       method: "POST",
       headers: {
@@ -106,48 +97,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <div className="text-xl font-bold text-primary">Hasnain</div>
           <div className="flex items-center gap-8">
-            
-              href="#about"
-              className="text-sm hover:text-primary transition-colors"
-            >
-              About
-            </a>
-            
-              href="#projects"
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Projects
-            </a>
-            
-              href="#experience"
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Experience
-            </a>
-            
-              href="#skills"
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Skills
-            </a>
-            
-              href="#contact"
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Contact
-            </a>
+            <a href="#about" className="text-sm hover:text-primary transition-colors">About</a>
+            <a href="#projects" className="text-sm hover:text-primary transition-colors">Projects</a>
+            <a href="#experience" className="text-sm hover:text-primary transition-colors">Experience</a>
+            <a href="#skills" className="text-sm hover:text-primary transition-colors">Skills</a>
+            <a href="#contact" className="text-sm hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Background Image */}
         <div
           className="absolute inset-0 z-0 opacity-30"
           style={{
@@ -157,13 +120,10 @@ export default function Home() {
             backgroundPosition: "center",
           }}
         />
-
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent z-10" />
 
         <div className="container relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div className="space-y-8">
               <AnimatedElement delay={100}>
                 <div className="space-y-4">
@@ -212,32 +172,18 @@ export default function Home() {
               </AnimatedElement>
 
               <AnimatedElement delay={300} className="flex gap-6 pt-4">
-                
-                  href="https://linkedin.com/in/rana-muhammad-hassnain-a52447370"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="https://linkedin.com/in/rana-muhammad-hassnain-a52447370" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin size={24} />
                 </a>
-                
-                  href="https://github.com/Rana4682"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="https://github.com/Rana4682" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Github size={24} />
                 </a>
-                
-                  href="mailto:ranahassnainrajput786@gmail.com"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="mailto:ranahassnainrajput786@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={24} />
                 </a>
               </AnimatedElement>
             </div>
 
-            {/* Right Visual */}
             <AnimatedElement delay={150} className="hidden lg:block">
               <div className="relative h-96 rounded-lg overflow-hidden border border-primary/20">
                 <div
@@ -256,7 +202,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
@@ -295,15 +240,11 @@ export default function Home() {
                 <div className="space-y-3 text-sm">
                   <div>
                     <span className="text-muted-foreground">Location:</span>
-                    <p className="text-foreground font-semibold">
-                      Sukkur, Pakistan
-                    </p>
+                    <p className="text-foreground font-semibold">Sukkur, Pakistan</p>
                   </div>
                   <div>
                     <span className="text-muted-foreground">Education:</span>
-                    <p className="text-foreground font-semibold">
-                      B.S. Artificial Intelligence
-                    </p>
+                    <p className="text-foreground font-semibold">B.S. Artificial Intelligence</p>
                   </div>
                   <div>
                     <span className="text-muted-foreground">GPA:</span>
@@ -311,9 +252,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-muted-foreground">Focus:</span>
-                    <p className="text-foreground font-semibold">
-                      ML, NLP, Data Science
-                    </p>
+                    <p className="text-foreground font-semibold">ML, NLP, Data Science</p>
                   </div>
                 </div>
               </Card>
@@ -322,28 +261,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12">
-              Featured Projects
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Featured Projects</h2>
           </AnimatedElement>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
             <AnimatedElement delay={100}>
               <Card className="bg-card border-border hover-lift overflow-hidden group">
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-bold mb-2">
-                        NLP Question Generation System
-                      </h3>
-                      <p className="text-sm text-primary font-semibold">
-                        Current Research Project
-                      </p>
+                      <h3 className="text-xl font-bold mb-2">NLP Question Generation System</h3>
+                      <p className="text-sm text-primary font-semibold">Current Research Project</p>
                     </div>
                     <Code2 className="text-primary opacity-50 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -354,43 +285,25 @@ export default function Home() {
                     rule-based and T5 neural approaches.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Python
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      spaCy
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Transformers
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      PyTorch
-                    </span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Python</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">spaCy</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Transformers</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">PyTorch</span>
                   </div>
-                  
-                    href="https://drive.google.com/file/d/1naJfyG7k5Aq4MSAsiY6wihFljjLQGp6-/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all"
-                  >
+                  <a href="https://drive.google.com/file/d/1naJfyG7k5Aq4MSAsiY6wihFljjLQGp6-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
                     View Details <ExternalLink size={16} />
                   </a>
                 </div>
               </Card>
             </AnimatedElement>
 
-            {/* Project 2 */}
             <AnimatedElement delay={150}>
               <Card className="bg-card border-border hover-lift overflow-hidden group">
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-bold mb-2">
-                        Heart Disease Prediction
-                      </h3>
-                      <p className="text-sm text-primary font-semibold">
-                        ML Application
-                      </p>
+                      <h3 className="text-xl font-bold mb-2">Heart Disease Prediction</h3>
+                      <p className="text-sm text-primary font-semibold">ML Application</p>
                     </div>
                     <Brain className="text-primary opacity-50 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -401,43 +314,25 @@ export default function Home() {
                     Decision Trees with comprehensive model evaluation.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Python
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Scikit-learn
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Flask
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      ML
-                    </span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Python</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Scikit-learn</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Flask</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">ML</span>
                   </div>
-                  
-                    href="https://github.com/Rana4682/Heart-Disease-Prediction"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all"
-                  >
+                  <a href="https://github.com/Rana4682/Heart-Disease-Prediction" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
                     View on GitHub <ExternalLink size={16} />
                   </a>
                 </div>
               </Card>
             </AnimatedElement>
 
-            {/* Project 3 */}
             <AnimatedElement delay={200}>
               <Card className="bg-card border-border hover-lift overflow-hidden group">
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-bold mb-2">
-                        Eid Sales Analysis
-                      </h3>
-                      <p className="text-sm text-primary font-semibold">
-                        Data Analysis
-                      </p>
+                      <h3 className="text-xl font-bold mb-2">Eid Sales Analysis</h3>
+                      <p className="text-sm text-primary font-semibold">Data Analysis</p>
                     </div>
                     <Database className="text-primary opacity-50 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -448,25 +343,12 @@ export default function Home() {
                     regional performance insights.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Python
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Pandas
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      Matplotlib
-                    </span>
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                      EDA
-                    </span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Python</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Pandas</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Matplotlib</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">EDA</span>
                   </div>
-                  
-                    href="https://github.com/Rana4682/Eid-Sales-Analysis.git"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all"
-                  >
+                  <a href="https://github.com/Rana4682/Eid-Sales-Analysis.git" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all">
                     View on GitHub <ExternalLink size={16} />
                   </a>
                 </div>
@@ -476,30 +358,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12">
-              Experience & Research
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Experience & Research</h2>
           </AnimatedElement>
 
           <div className="space-y-8">
-            {/* Experience 1 */}
             <AnimatedElement delay={100}>
               <div className="relative pl-8 border-l-2 border-primary pb-8">
                 <div className="absolute left-[-13px] top-0 w-6 h-6 bg-primary rounded-full" />
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">
-                    Machine Learning Engineer
-                  </h3>
-                  <p className="text-primary font-semibold">
-                    Elevvo Pathways, Cairo, Egypt
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    July 2025 - August 2025
-                  </p>
+                  <h3 className="text-xl font-bold">Machine Learning Engineer</h3>
+                  <p className="text-primary font-semibold">Elevvo Pathways, Cairo, Egypt</p>
+                  <p className="text-sm text-muted-foreground">July 2025 - August 2025</p>
                   <p className="text-muted-foreground mt-3">
                     Assisted in preparing and preprocessing datasets for machine
                     learning tasks. Implemented supervised learning algorithms
@@ -512,20 +384,13 @@ export default function Home() {
               </div>
             </AnimatedElement>
 
-            {/* Experience 2 */}
             <AnimatedElement delay={150}>
               <div className="relative pl-8 border-l-2 border-primary pb-8">
                 <div className="absolute left-[-13px] top-0 w-6 h-6 bg-primary rounded-full" />
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">
-                    Data Science & Analytics
-                  </h3>
-                  <p className="text-primary font-semibold">
-                    DevelopersHub Corporation, Islamabad, Pakistan
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    June 2025 - July 2025
-                  </p>
+                  <h3 className="text-xl font-bold">Data Science & Analytics</h3>
+                  <p className="text-primary font-semibold">DevelopersHub Corporation, Islamabad, Pakistan</p>
+                  <p className="text-sm text-muted-foreground">June 2025 - July 2025</p>
                   <p className="text-muted-foreground mt-3">
                     Delivered actionable insights through advanced data
                     cleaning, preprocessing, and exploratory analysis. Built and
@@ -538,20 +403,13 @@ export default function Home() {
               </div>
             </AnimatedElement>
 
-            {/* Research */}
             <AnimatedElement delay={200}>
               <div className="relative pl-8 border-l-2 border-primary pb-8">
                 <div className="absolute left-[-13px] top-0 w-6 h-6 bg-primary rounded-full" />
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">
-                    Research Assistant - AI Ethics
-                  </h3>
-                  <p className="text-primary font-semibold">
-                    KFUEIT, Rahim Yar Khan (HEC-NRPU Project)
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    October 2025 - Present
-                  </p>
+                  <h3 className="text-xl font-bold">Research Assistant - AI Ethics</h3>
+                  <p className="text-primary font-semibold">KFUEIT, Rahim Yar Khan (HEC-NRPU Project)</p>
+                  <p className="text-sm text-muted-foreground">October 2025 - Present</p>
                   <p className="text-muted-foreground mt-3">
                     Selected through formal university committee for HEC-funded
                     national research project on "Ethical Framework for AI in
@@ -567,17 +425,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12">
-              Technical Skills
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Technical Skills</h2>
           </AnimatedElement>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Programming */}
             <AnimatedElement delay={100}>
               <Card className="bg-card border-border p-6 hover-lift">
                 <Code2 className="text-primary mb-4" size={32} />
@@ -591,7 +445,6 @@ export default function Home() {
               </Card>
             </AnimatedElement>
 
-            {/* ML & Data Science */}
             <AnimatedElement delay={150}>
               <Card className="bg-card border-border p-6 hover-lift">
                 <Brain className="text-primary mb-4" size={32} />
@@ -605,7 +458,6 @@ export default function Home() {
               </Card>
             </AnimatedElement>
 
-            {/* Data Processing */}
             <AnimatedElement delay={200}>
               <Card className="bg-card border-border p-6 hover-lift">
                 <Database className="text-primary mb-4" size={32} />
@@ -619,13 +471,10 @@ export default function Home() {
               </Card>
             </AnimatedElement>
 
-            {/* NLP & Specializations */}
             <AnimatedElement delay={250}>
               <Card className="bg-card border-border p-6 hover-lift">
                 <BookOpen className="text-primary mb-4" size={32} />
-                <h3 className="text-lg font-bold mb-3">
-                  NLP & Specializations
-                </h3>
+                <h3 className="text-lg font-bold mb-3">NLP & Specializations</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>• spaCy</li>
                   <li>• NLP</li>
@@ -638,130 +487,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Section */}
       <section className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12">
-              Certifications
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Certifications</h2>
           </AnimatedElement>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatedElement delay={100}>
-              
-                href="https://coursera.org/verify/specialization/B8F4Q32LSOI2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a href="https://coursera.org/verify/specialization/B8F4Q32LSOI2" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="bg-card border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-lg font-bold mb-2">
-                    Machine Learning Specialization
-                  </h3>
-                  <p className="text-primary text-sm font-semibold mb-2">
-                    DeepLearning.AI (Coursera)
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Completed June 2025
-                  </p>
-                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">
-                    View Certificate →
-                  </p>
+                  <h3 className="text-lg font-bold mb-2">Machine Learning Specialization</h3>
+                  <p className="text-primary text-sm font-semibold mb-2">DeepLearning.AI (Coursera)</p>
+                  <p className="text-muted-foreground text-sm">Completed June 2025</p>
+                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">View Certificate →</p>
                 </Card>
               </a>
             </AnimatedElement>
 
             <AnimatedElement delay={150}>
-              
-                href="https://coursera.org/verify/0SRDNN34XFYN"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a href="https://coursera.org/verify/0SRDNN34XFYN" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="bg-card border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-lg font-bold mb-2">
-                    Introduction to Generative AI
-                  </h3>
-                  <p className="text-primary text-sm font-semibold mb-2">
-                    Google
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Completed August 2025
-                  </p>
-                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">
-                    View Certificate →
-                  </p>
+                  <h3 className="text-lg font-bold mb-2">Introduction to Generative AI</h3>
+                  <p className="text-primary text-sm font-semibold mb-2">Google</p>
+                  <p className="text-muted-foreground text-sm">Completed August 2025</p>
+                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">View Certificate →</p>
                 </Card>
               </a>
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
-              
-                href="https://coursera.org/verify/0SRDNN34XFYN"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a href="https://coursera.org/verify/0SRDNN34XFYN" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="bg-card border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-lg font-bold mb-2">
-                    Introduction to Artificial Intelligence
-                  </h3>
+                  <h3 className="text-lg font-bold mb-2">Introduction to Artificial Intelligence</h3>
                   <p className="text-primary text-sm font-semibold mb-2">IBM</p>
-                  <p className="text-muted-foreground text-sm">
-                    Completed July 2025
-                  </p>
-                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">
-                    View Certificate →
-                  </p>
+                  <p className="text-muted-foreground text-sm">Completed July 2025</p>
+                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">View Certificate →</p>
                 </Card>
               </a>
             </AnimatedElement>
 
             <AnimatedElement delay={250}>
-              
-                href="https://coursera.org/share/c7ab6871d7fd261b867bbf6768ae2eb6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a href="https://coursera.org/share/c7ab6871d7fd261b867bbf6768ae2eb6" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="bg-card border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-lg font-bold mb-2">
-                    Foundations: Data, Data, Everywhere
-                  </h3>
-                  <p className="text-primary text-sm font-semibold mb-2">
-                    Google (Coursera)
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Completed 2025
-                  </p>
-                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">
-                    View Certificate →
-                  </p>
+                  <h3 className="text-lg font-bold mb-2">Foundations: Data, Data, Everywhere</h3>
+                  <p className="text-primary text-sm font-semibold mb-2">Google (Coursera)</p>
+                  <p className="text-muted-foreground text-sm">Completed 2025</p>
+                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">View Certificate →</p>
                 </Card>
               </a>
             </AnimatedElement>
 
             <AnimatedElement delay={300}>
-              
-                href="https://coursera.org/verify/V3JUVU34EAY4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a href="https://coursera.org/verify/V3JUVU34EAY4" target="_blank" rel="noopener noreferrer" className="block">
                 <Card className="bg-card border-border p-6 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer">
-                  <h3 className="text-lg font-bold mb-2">
-                    Foundations of Business Intelligence
-                  </h3>
-                  <p className="text-primary text-sm font-semibold mb-2">
-                    Google (Coursera)
-                  </p>
-                  <p className="text-muted-foreground text-sm">
-                    Completed 2025
-                  </p>
-                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">
-                    View Certificate →
-                  </p>
+                  <h3 className="text-lg font-bold mb-2">Foundations of Business Intelligence</h3>
+                  <p className="text-primary text-sm font-semibold mb-2">Google (Coursera)</p>
+                  <p className="text-muted-foreground text-sm">Completed 2025</p>
+                  <p className="text-primary text-xs font-semibold mt-3 flex items-center gap-1">View Certificate →</p>
                 </Card>
               </a>
             </AnimatedElement>
@@ -769,28 +552,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 border-t border-border">
         <div className="container">
           <AnimatedElement>
             <div className="max-w-3xl mx-auto space-y-12">
               <div className="text-center space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold">
-                  Let's Connect
-                </h2>
+                <h2 className="text-4xl md:text-5xl font-bold">Let's Connect</h2>
                 <p className="text-lg text-muted-foreground">
                   I'm always interested in hearing about new opportunities and
                   collaborations. Feel free to reach out!
                 </p>
               </div>
 
-              {/* Quick Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base"
                   onClick={() =>
-                    (window.location.href =
-                      "mailto:ranahassnainrajput786@gmail.com")
+                    (window.location.href = "mailto:ranahassnainrajput786@gmail.com")
                   }
                 >
                   <Mail className="mr-2" size={20} />
@@ -800,10 +578,7 @@ export default function Home() {
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary/10 px-8 py-6 text-base"
                   onClick={() =>
-                    window.open(
-                      "https://linkedin.com/in/rana-muhammad-hassnain-a52447370",
-                      "_blank"
-                    )
+                    window.open("https://linkedin.com/in/rana-muhammad-hassnain-a52447370", "_blank")
                   }
                 >
                   <Linkedin className="mr-2" size={20} />
@@ -811,21 +586,11 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Contact Form */}
               <Card className="bg-card border-border p-8">
-                <form
-                  onSubmit={handleFormSubmit}
-                  className="space-y-6"
-                  noValidate
-                >
+                <form onSubmit={handleFormSubmit} className="space-y-6" noValidate>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label
-                        htmlFor="name"
-                        className="text-sm font-semibold text-foreground"
-                      >
-                        Your Name
-                      </label>
+                      <label htmlFor="name" className="text-sm font-semibold text-foreground">Your Name</label>
                       <Input
                         id="name"
                         name="name"
@@ -838,12 +603,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-semibold text-foreground"
-                      >
-                        Your Email
-                      </label>
+                      <label htmlFor="email" className="text-sm font-semibold text-foreground">Your Email</label>
                       <Input
                         id="email"
                         name="email"
@@ -858,12 +618,7 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-2">
-                    <label
-                      htmlFor="message"
-                      className="text-sm font-semibold text-foreground"
-                    >
-                      Message
-                    </label>
+                    <label htmlFor="message" className="text-sm font-semibold text-foreground">Message</label>
                     <textarea
                       id="message"
                       name="message"
@@ -885,17 +640,13 @@ export default function Home() {
                   </Button>
 
                   {submitMessage && (
-                    <p className="text-sm text-primary text-center font-semibold">
-                      {submitMessage}
-                    </p>
+                    <p className="text-sm text-primary text-center font-semibold">{submitMessage}</p>
                   )}
                 </form>
               </Card>
 
               <div className="text-center pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground">
-                  © 2026 Rana Muhammad Hassnain. All rights reserved.
-                </p>
+                <p className="text-sm text-muted-foreground">© 2026 Rana Muhammad Hassnain. All rights reserved.</p>
               </div>
             </div>
           </AnimatedElement>
