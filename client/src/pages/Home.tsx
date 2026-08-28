@@ -111,31 +111,31 @@ export default function Home() {
         <div className="container flex items-center justify-between h-16">
           <div className="text-xl font-bold text-primary">Hasnain</div>
           <div className="flex items-center gap-8">
-            <a
+            
               href="#about"
               className="text-sm hover:text-primary transition-colors"
             >
               About
             </a>
-            <a
+            
               href="#projects"
               className="text-sm hover:text-primary transition-colors"
             >
               Projects
             </a>
-            <a
+            
               href="#experience"
               className="text-sm hover:text-primary transition-colors"
             >
               Experience
             </a>
-            <a
+            
               href="#skills"
               className="text-sm hover:text-primary transition-colors"
             >
               Skills
             </a>
-            <a
+            
               href="#contact"
               className="text-sm hover:text-primary transition-colors"
             >
@@ -176,9 +176,12 @@ export default function Home() {
                     Rana Muhammad <span className="text-primary">Hassnain</span>
                   </h1>
                   <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                    Passionate AI student with expertise in machine learning,
-                    data analysis, and NLP. Currently contributing to HEC-funded
-                    research on AI ethics.
+                    I build applied AI systems — NLP pipelines, deployed ML
+                    models, and data-driven tools — that turn messy
+                    real-world data into working software, not just
+                    notebook experiments. Currently researching ethical AI
+                    frameworks for Pakistan through a HEC-funded national
+                    project.
                   </p>
                 </div>
               </AnimatedElement>
@@ -209,7 +212,7 @@ export default function Home() {
               </AnimatedElement>
 
               <AnimatedElement delay={300} className="flex gap-6 pt-4">
-                <a
+                
                   href="https://linkedin.com/in/rana-muhammad-hassnain-a52447370"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -217,7 +220,7 @@ export default function Home() {
                 >
                   <Linkedin size={24} />
                 </a>
-                <a
+                
                   href="https://github.com/Rana4682"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -225,7 +228,7 @@ export default function Home() {
                 >
                   <Github size={24} />
                 </a>
-                <a
+                
                   href="mailto:ranahassnainrajput786@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -364,7 +367,7 @@ export default function Home() {
                       PyTorch
                     </span>
                   </div>
-                  <a
+                  
                     href="https://drive.google.com/file/d/1naJfyG7k5Aq4MSAsiY6wihFljjLQGp6-/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -411,7 +414,7 @@ export default function Home() {
                       ML
                     </span>
                   </div>
-                  <a
+                  
                     href="https://github.com/Rana4682/Heart-Disease-Prediction"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -458,7 +461,7 @@ export default function Home() {
                       EDA
                     </span>
                   </div>
-                  <a
+                  
                     href="https://github.com/Rana4682/Eid-Sales-Analysis.git"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -547,7 +550,7 @@ export default function Home() {
                     KFUEIT, Rahim Yar Khan (HEC-NRPU Project)
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    October 2025 - Current
+                    October 2025 - Present
                   </p>
                   <p className="text-muted-foreground mt-3">
                     Selected through formal university committee for HEC-funded
@@ -646,7 +649,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatedElement delay={100}>
-              <a
+              
                 href="https://coursera.org/verify/specialization/B8F4Q32LSOI2"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -670,7 +673,7 @@ export default function Home() {
             </AnimatedElement>
 
             <AnimatedElement delay={150}>
-              <a
+              
                 href="https://coursera.org/verify/0SRDNN34XFYN"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -694,7 +697,7 @@ export default function Home() {
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
-              <a
+              
                 href="https://coursera.org/verify/0SRDNN34XFYN"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -716,7 +719,7 @@ export default function Home() {
             </AnimatedElement>
 
             <AnimatedElement delay={250}>
-              <a
+              
                 href="https://coursera.org/share/c7ab6871d7fd261b867bbf6768ae2eb6"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -740,7 +743,7 @@ export default function Home() {
             </AnimatedElement>
 
             <AnimatedElement delay={300}>
-              <a
+              
                 href="https://coursera.org/verify/V3JUVU34EAY4"
                 target="_blank"
                 rel="noopener noreferrer"
